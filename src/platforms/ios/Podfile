@@ -1,0 +1,2 @@
+platform :ios, '8.0'
+pod 'AppCenter', '~> 1.1.0'
