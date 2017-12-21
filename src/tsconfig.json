@@ -26,6 +26,15 @@
             ]
         }
     },
+    "include": [
+        "**/*.ts",
+        "**/*.d.ts",        
+        "**/*.tsx"
+    ],
+    "files": [
+        "./node_modules/tns-platform-declarations/ios.d.ts",
+        "./node_modules/tns-platform-declarations/android.d.ts"
+    ],
     "exclude": [
         "node_modules"
     ],
