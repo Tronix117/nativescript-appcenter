@@ -2,7 +2,7 @@
     "name": "nativescript-appcenter",
     "version": "1.0.0",
     "description": "Your awesome NativeScript plugin.",
-    "main": "appcenter",
+    "main": "index",
     "typings": "index.d.ts",
     "nativescript": {
         "platforms": {
