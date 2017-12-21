@@ -46,3 +46,7 @@ gulp.task('build.android', function(){
 });
 
 gulp.task('build', [ 'build.ios', 'build.android' ]);
+
+gulp.task('watch', ['build'], function() {
+    gulp.watch(['**/*.ts', '!index*.ts'], ['build']);
+});
