@@ -1,6 +1,7 @@
 import { Observable } from 'tns-core-modules/data/observable';
-import { AppCenter } from 'nativescript-appcenter';
+import { AppCenter, Crashes } from 'nativescript-appcenter';
 import * as application from "application";
+import * as dialogs from 'tns-core-modules/ui/dialogs';
 
 export class HelloWorldModel extends Observable {
   public message: string = "Derp";
@@ -13,5 +14,10 @@ export class HelloWorldModel extends Observable {
     } else if (application.android) {
         AppCenter.startAnalyticsAndCrashDetection("f38e16c0-4cd1-4814-b434-52a5222bfef4");
     }
+  }
+
+  generateCrash(): void {
+      Crashes.generateTestCrash();
+      // dialogs.alert(`Replace me to generate Crash`).then(() => console.log(`Dialog closed.`));
   }
 }
