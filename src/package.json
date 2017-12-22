@@ -1,9 +1,9 @@
 {
     "name": "nativescript-appcenter",
-    "version": "1.0.0",
-    "description": "Your awesome NativeScript plugin.",
-    "main": "index",
-    "typings": "index.d.ts",
+    "version": "0.1.1",
+    "description": "Microsoft's App Center SDK (Analytics and Crash Reporting modules) in a NativeScript plugin.",
+    "main": "dist/index",
+    "typings": "dist/index.d.ts",
     "nativescript": {
         "platforms": {
             "android": "3.0.0",
@@ -30,11 +30,17 @@
         "NativeScript",
         "JavaScript",
         "Android",
-        "iOS"
+        "iOS",
+        "AppCenter",
+        "App Center",
+        "Analytics",
+        "Crash Reporting",
+        "Microsoft",
+        "Visual Studio App Center"
     ],
     "author": {
-        "name": "Your Name",
-        "email": "youremail@yourdomain.com"
+        "name": "Brad Linard",
+        "email": "brad.linard@idelata.com"
     },
     "bugs": {
         "url": "https://github.com/blinard/nativescript-appcenter/issues"
@@ -43,6 +49,7 @@
     "homepage": "https://github.com/blinard/nativescript-appcenter",
     "readmeFilename": "README.md",
     "devDependencies": {
+        "bluebird": "^3.5.1",
         "gulp": "^3.9.1",
         "gulp-concat": "^2.6.1",
         "gulp-filter": "^5.0.1",
