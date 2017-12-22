@@ -7,8 +7,7 @@ declare var com: {
             analytics: {
                 Analytics: {
                     class: any;
-                    trackEvent(eventName: string): void;
-                    trackEventWithProperties(eventName: string, properties?: object): void;
+                    trackEvent(eventName: string, properties?: java.util.Map<string, string>): void;
                     isEnabled(): boolean;
                     setEnabled(enabled: boolean): void
                 }

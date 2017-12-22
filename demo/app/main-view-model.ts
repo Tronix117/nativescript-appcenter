@@ -22,7 +22,7 @@ export class HelloWorldModel extends Observable {
   }
 
   publishEvent(): void {
-      Analytics.trackEvent("Test event", null);
+      Analytics.trackEvent("Test event");
       // event
   }
 

@@ -3,7 +3,14 @@ declare var AnalyticsCommon: any;
 export namespace Analytics {
     export function trackEvent(eventName: string, properties?: object): void {
         if (properties) {
-            com.microsoft.appcenter.analytics.Analytics.trackEventWithProperties(eventName, AnalyticsCommon.sanitizeProperties(properties));
+            const sanitizedProps = AnalyticsCommon.sanitizeProperties(properties);
+            const keys = Object.keys(sanitizedProps);
+            const dict = new java.util.HashMap<string, string>(keys.length);
+            keys.forEach(k => {
+                dict.put(k, sanitizedProps[k]);
+            });
+
+            com.microsoft.appcenter.analytics.Analytics.trackEvent(eventName, dict);
             return;
         }
 
