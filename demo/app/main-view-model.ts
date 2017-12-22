@@ -1,5 +1,5 @@
 import { Observable } from 'tns-core-modules/data/observable';
-import { AppCenter, Crashes } from 'nativescript-appcenter';
+import { AppCenter, Crashes, Analytics } from 'nativescript-appcenter';
 import * as application from "application";
 import * as dialogs from 'tns-core-modules/ui/dialogs';
 
@@ -19,5 +19,15 @@ export class HelloWorldModel extends Observable {
   generateCrash(): void {
       Crashes.generateTestCrash();
       // dialogs.alert(`Replace me to generate Crash`).then(() => console.log(`Dialog closed.`));
+  }
+
+  publishEvent(): void {
+      Analytics.trackEvent("Test event", null);
+      // event
+  }
+
+  publishEventWithProperties(): void {
+    Analytics.trackEvent("Test event with properties", { someProp: "someValue" });
+    // event
   }
 }

@@ -16,3 +16,15 @@ export function generateCrash(args: observable.EventData) {
     let vm = <HelloWorldModel>button.page.bindingContext;
     vm.generateCrash();
 }
+
+export function publishEvent(args: observable.EventData) {
+    let button = <buttons.Button>args.object;
+    let vm = <HelloWorldModel>button.page.bindingContext;
+    vm.publishEvent();
+}
+
+export function publishEventWithProperties(args: observable.EventData) {
+    let button = <buttons.Button>args.object;
+    let vm = <HelloWorldModel>button.page.bindingContext;
+    vm.publishEventWithProperties();
+}

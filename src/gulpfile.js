@@ -7,7 +7,7 @@ var filter = require('gulp-filter');
 
 gulp.task('build.ios', function(){
     var tsProj = ts.createProject('tsconfig.json');
-    var iosFilter = filter(['**/*ios*', '!index.ios*']);
+    var iosFilter = filter(['**/*ios*', '**/*common*', '!index.ios*']);
 
     var tsResult = tsProj.src()
         .pipe(iosFilter)
@@ -20,14 +20,14 @@ gulp.task('build.ios', function(){
             .pipe(sourcemaps.write())
             .pipe(gulp.dest('.')),
         tsResult.dts
-            .pipe(concat('index.ios.d.ts'))
-            .pipe(gulp.dest('.'))    
+            .pipe(concat('index.d.ts'))
+            .pipe(gulp.dest('.'))
     ]);
 });
 
 gulp.task('build.android', function(){
     var tsProj = ts.createProject('tsconfig.json');
-    var iosFilter = filter(['**/*android*', '!index.android*']);
+    var iosFilter = filter(['**/*android*', '**/*common*', '!index.android*']);
 
     var tsResult = tsProj.src()
         .pipe(iosFilter)
@@ -40,7 +40,7 @@ gulp.task('build.android', function(){
             .pipe(sourcemaps.write())
             .pipe(gulp.dest('.')),
         tsResult.dts
-            .pipe(concat('index.anroid.d.ts'))
+            .pipe(concat('index.d.ts'))
             .pipe(gulp.dest('.'))
     ]);
 });

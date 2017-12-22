@@ -2,6 +2,8 @@
   xmlns:ui="nativescript-appcenter">
   <StackLayout class="p-20">
     <Label text="{{ message }}" class="t-20 text-center c-black" textWrap="true"/>
-    <Button text="Generate Crash" tap="generateCrash"/>
+    <Button text="Generate Crash" class="t-20" tap="generateCrash"/>
+    <Button text="Publish Event" class="t-20" tap="publishEvent"/>
+    <Button text="Publish Event with Properties" class="t-20" tap="publishEventWithProperties"/>
   </StackLayout>
 </Page>

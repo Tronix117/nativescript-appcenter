@@ -1,7 +1,7 @@
-import {AnalyticsCommon} from "../analytics.common";
+declare var AnalyticsCommon: any;
 
 export namespace Analytics {
-    export function trackEvent(eventName: string, properties: object): void {
+    export function trackEvent(eventName: string, properties?: object): void {
         if (properties) {
             com.microsoft.appcenter.analytics.Analytics.trackEventWithProperties(eventName, AnalyticsCommon.sanitizeProperties(properties));
             return;
